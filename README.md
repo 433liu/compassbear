@@ -1,4 +1,4 @@
-# CompassBear Academic Compass
+# CompassBear 
 
 CompassBear is a claim-first research workflow skill for Codex / Claude Code. It helps researchers turn scattered data, mechanisms, figures and applications into defensible scientific manuscripts, proposals, cover letters, rebuttals and patent-style claim structures.
 
