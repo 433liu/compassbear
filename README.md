@@ -52,9 +52,9 @@ A safe workflow:
 5. Test on anonymized project cases.
 6. Keep personal or unpublished lens material local, not in public releases.
 
-## Public-clean build
+## Public build
 
-This repository is for the sanitized `v0.5.14-public-clean` build.
+This repository is for the sanitized `v0.5.14-public` build.
 
 It does not include:
 
@@ -74,21 +74,21 @@ It includes:
 
 ## Install
 
-Download the public-clean package from the release, unzip it, and install the extracted folder as `compass-bear`.
+Download `compass-bear-v0.5.14-public.zip` from the release, unzip it, and install the extracted folder as `compass-bear`.
 
 Codex Desktop on Windows:
 
 ```powershell
 $destRoot = "$env:USERPROFILE\.codex\skills"
 New-Item -ItemType Directory -Force -Path $destRoot | Out-Null
-Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public-clean" "$destRoot\compass-bear"
+Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public" "$destRoot\compass-bear"
 ```
 
 Claude Code:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public-clean ~/.claude/skills/compass-bear
+cp -R /path/to/compass-bear-v0.5.14-public ~/.claude/skills/compass-bear
 ```
 
 Restart the app, then invoke:
