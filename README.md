@@ -6,6 +6,28 @@ It is not a phrase-polishing prompt. The core question is:
 
 > What must the reader believe, and what evidence makes that belief unavoidable?
 
+## Why CompassBear is different
+
+Most academic AI workflows are good at one narrow layer: polishing prose, summarizing papers, formatting documents or simulating expert comments. CompassBear is built around the layer before polishing: whether the scientific story is defensible.
+
+Its strengths:
+
+- starts from the central claim rather than sentence style;
+- links claims to evidence owners, figures and reviewer risks;
+- designs figures as arguments rather than decorations;
+- gives demotion language when evidence is suggestive but not decisive;
+- separates literature support, project-specific proof and unsupported analogy;
+- lets users build local source-backed expert lenses without impersonating real people.
+
+Its trade-offs:
+
+- heavier than a quick writing prompt;
+- needs real evidence from the user for high-stakes claims;
+- cannot replace literature reading, experimental validation or statistical review;
+- local expert lenses are only as good as the source notes used to build them.
+
+Use CompassBear when the bottleneck is not "make this sound better" but "make this story harder to attack."
+
 ## What it helps with
 
 - Manuscript claim hierarchy and paper framing
@@ -17,9 +39,22 @@ It is not a phrase-polishing prompt. The core question is:
 - Research-council style project direction debate
 - High-risk claim boundary control and reviewer-risk analysis
 
-## Public-share build
+## Building local expert lenses
 
-This repository is for the sanitized public-share build `v0.5.14-public-share`.
+CompassBear can support local expert lenses, but the goal is not to imitate a professor or named researcher. The goal is to extract source-backed decision rules.
+
+A safe workflow:
+
+1. Collect public materials: papers, reviews, talks, interviews or lectures.
+2. Write source notes: what claims, evidence standards, figure preferences and recurring critiques appear in those sources?
+3. Extract decision rules: what would this lens promote, demote, veto or ask to prove?
+4. Define boundaries: where this lens is useful, and where it should fall back to generic roles.
+5. Test on anonymized project cases.
+6. Keep personal or unpublished lens material local, not in public releases.
+
+## Public-clean build
+
+This repository is for the sanitized `v0.5.14-public-clean` build.
 
 It does not include:
 
@@ -27,6 +62,7 @@ It does not include:
 - generated outputs
 - personal project rosters or source notes
 - personal mentor lens cards or related private routing references
+- project-specific examples that reveal the user's manuscript direction
 
 It includes:
 
@@ -38,36 +74,27 @@ It includes:
 
 ## Install
 
-Download the public-share package from the release, unzip it, and install the extracted folder as `compass-bear`.
+Download the public-clean package from the release, unzip it, and install the extracted folder as `compass-bear`.
 
 Codex Desktop on Windows:
 
 ```powershell
 $destRoot = "$env:USERPROFILE\.codex\skills"
 New-Item -ItemType Directory -Force -Path $destRoot | Out-Null
-Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public-share" "$destRoot\compass-bear"
+Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public-clean" "$destRoot\compass-bear"
 ```
 
 Claude Code:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public-share ~/.claude/skills/compass-bear
+cp -R /path/to/compass-bear-v0.5.14-public-clean ~/.claude/skills/compass-bear
 ```
 
 Restart the app, then invoke:
 
 ```text
 $compass-bear
-```
-
-## Verify
-
-From the installed folder:
-
-```bash
-python scripts/cb.py doctor
-python scripts/cb.py checks
 ```
 
 ## Try it
@@ -79,14 +106,14 @@ Help me audit this abstract for claim discipline, evidence hierarchy and AI rhyt
 
 ```text
 $compass-bear
-Use a research council to debate whether this project should be framed as mechanism, method or application.
+Use a research council to debate whether this project should be framed as mechanism, method, platform or application.
 ```
 
 ## Files to read first
 
 - `INSTALL.md` for installation
-- `USAGE.md` for the full workflow
-- `SKILL.md` for the root skill behavior
+- `USAGE.md` inside the zip for the full workflow
+- `SKILL.md` inside the zip for the root skill behavior
 
 ## License
 
