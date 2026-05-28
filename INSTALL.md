@@ -1,6 +1,6 @@
-# CompassBear Public-Clean Installation Guide
+# CompassBear Public Installation Guide
 
-This package is the sanitized public-clean build of `compass-bear`.
+This package is the sanitized public build of `compass-bear`.
 
 It does not include:
 
@@ -14,7 +14,7 @@ It includes the reusable skill, sub-skills, references, scripts, public examples
 
 ## 1. Download and unzip
 
-Download `compass-bear-v0.5.14-public-clean.zip` from the GitHub release.
+Download `compass-bear-v0.5.14-public.zip` from the GitHub release.
 
 Unzip it and keep the installed folder name as:
 
@@ -22,14 +22,14 @@ Unzip it and keep the installed folder name as:
 compass-bear
 ```
 
-If the extracted folder is named `compass-bear-v0.5.14-public-clean`, rename it to `compass-bear` when installing into a skills directory.
+If the extracted folder is named `compass-bear-v0.5.14-public`, rename it to `compass-bear` when installing into a skills directory.
 
 ## 2. Install for Codex Desktop on Windows
 
 ```powershell
 $destRoot = "$env:USERPROFILE\.codex\skills"
 New-Item -ItemType Directory -Force -Path $destRoot | Out-Null
-Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public-clean" "$destRoot\compass-bear"
+Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public" "$destRoot\compass-bear"
 ```
 
 Restart Codex Desktop. Invoke the skill with:
@@ -44,14 +44,14 @@ Global install:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public-clean ~/.claude/skills/compass-bear
+cp -R /path/to/compass-bear-v0.5.14-public ~/.claude/skills/compass-bear
 ```
 
 Project-level install:
 
 ```bash
 mkdir -p .claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public-clean .claude/skills/compass-bear
+cp -R /path/to/compass-bear-v0.5.14-public .claude/skills/compass-bear
 ```
 
 Restart Claude Code after copying.
@@ -86,7 +86,7 @@ Help me audit this abstract for claim discipline, evidence hierarchy and AI rhyt
 
 ## 6. Build your own local lenses
 
-The public-clean build has no personal mentor cards. To create your own local source-backed lens or source pack, start from:
+The public build has no personal mentor cards. To create your own local source-backed lens or source pack, start from:
 
 - `templates/expert-lens-template.md`
 - `templates/source-note-template.md`
