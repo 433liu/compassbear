@@ -1,4 +1,4 @@
-# compass-bear v0.5.14-public-clean
+# compass-bear v0.5.14-public
 
 This is a cleaner public release of CompassBear Academic Compass. It removes the project-specific example claims and domain-specific test prompts that were present in the earlier public-share package.
 
