@@ -12,6 +12,8 @@
 
 **English** | [中文](README.zh-CN.md)
 
+<img src="examples/compassbear-banner.svg" alt="CompassBear claim-first research workflow banner" width="100%">
+
 </div>
 
 > **Built from real manuscript revision workflows**: figure defense, data-to-claim hierarchy, consistency audits, cover letters, rebuttal planning, and journal positioning. CompassBear packages that full-cycle pressure into a reusable research skill.
