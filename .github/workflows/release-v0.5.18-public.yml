@@ -1,0 +1,71 @@
+name: Publish v0.5.18 public release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/release-v0.5.18-public.yml'
+      - 'README.md'
+      - 'README.zh-CN.md'
+      - 'INSTALL.md'
+      - 'SKILL.md'
+      - 'commands/**'
+      - 'agents/**'
+      - 'skills/**'
+      - 'scripts/**'
+      - 'examples/**'
+      - 'references/**'
+      - 'evals/**'
+      - 'index.html'
+      - 'SHOWCASE.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate package
+        run: python scripts/validate_package.py
+
+      - name: Build release zip
+        run: |
+          rm -rf compass-bear compass-bear-v0.5.18-public.zip SHA256SUMS.txt RELEASE_NOTES.md
+          mkdir compass-bear
+          cp README.md README.zh-CN.md INSTALL.md LICENSE SKILL.md index.html SHOWCASE.md .gitattributes compass-bear/
+          cp -R agents commands evals examples references skills scripts compass-bear/
+          zip -r compass-bear-v0.5.18-public.zip compass-bear
+          sha256sum compass-bear-v0.5.18-public.zip | tee SHA256SUMS.txt
+          cat > RELEASE_NOTES.md <<'EOF'
+          # CompassBear v0.5.18 public
+
+          Public, source-safe release for direct clone or zip installation.
+
+          Highlights:
+          - claim-first research workflow for Claude Code and Codex
+          - direct install path: git clone https://github.com/433liu/compassbear.git compass-bear
+          - package validator: python scripts/validate_package.py
+          - public live smoke test transcript
+          - bilingual README with 30-second overclaim demo
+
+          The zip extracts to an installable compass-bear/ folder.
+          EOF
+
+      - name: Replace existing v0.5.18 release if present
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release delete v0.5.18-public --cleanup-tag --yes || true
+
+      - name: Publish v0.5.18 release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v0.5.18-public \
+            --title "CompassBear v0.5.18 public" \
+            --notes-file RELEASE_NOTES.md \
+            compass-bear-v0.5.18-public.zip SHA256SUMS.txt
