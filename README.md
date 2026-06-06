@@ -175,6 +175,12 @@ not merely:
 - [examples/compassbear-output-gallery.md](examples/compassbear-output-gallery.md): output examples
 - [SHOWCASE.md](SHOWCASE.md): GitHub Topics, Description and launch copy
 
+## Co-Created Workflow
+
+CompassBear is a human-led, AI-assisted research workflow. It was shaped through real manuscript revision sessions with Codex and Claude Code as iterative co-builders: one pushing implementation, packaging and workflow discipline; the other helping pressure-test writing, positioning and research logic.
+
+The scientific responsibility stays with the researcher. The AI collaborators help expose weak claims, organize evidence and improve the workflow; they do not replace literature reading, experiments or expert judgment.
+
 ## Status & Contributing
 
 CompassBear is actively developed. Issues and pull requests are welcome. If CompassBear saves you a painful revision round, a star helps other researchers find it.
