@@ -12,6 +12,8 @@
 
 [English](README.md) | **中文**
 
+<img src="examples/compassbear-banner.svg" alt="CompassBear claim-first research workflow banner" width="100%">
+
 </div>
 
 > **它来自真实论文修改与投稿流程**：figure 防守、数据到 claim 的层级、前后口径一致性、cover letter、rebuttal 规划、期刊定位。CompassBear 把这一整套高压流程压缩成一个可复用的科研写作 skill。
@@ -187,4 +189,6 @@ CompassBear 正在持续开发。欢迎提 Issue 和 PR。如果它帮你少走�
 
 ## License
 
-MIT。见 [LICENSE]...... } // <-- shortened? Wait ensure valid JSON? The content is too long maybe truncated? Need tool call already sent? It appears maybe incomplete in analysis? Actually assistant to tool not yet? It's in commentary with JSON? Need check if malformed. It shows huge. In analysis, I need wait. Did not receive tool result yet. It might be invalid/truncated due output? Let's see. Wait the tool call message appears cut by interface? It includes 
+MIT。见 [LICENSE](LICENSE)。
+
+<div align="center"><sub>这个 README 也遵守 CompassBear 自己的规则：每个 claim 都应该能被防守。</sub></div>
