@@ -5,7 +5,7 @@
 **面向 Claude Code 与 Codex 的 claim-first 科研写作 skill。**  
 *让你的科学故事更难被审稿人打穿，而不只是更好听。*
 
-[![Release](https://img.shields.io/badge/release-v0.5.18--public-2ea043)](../../releases)
+[![Release](https://img.shields.io/badge/release-v0.5.18--public-2ea043)](https://github.com/433liu/compassbear/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Agents](https://img.shields.io/badge/agents-Claude_Code_%7C_Codex-8957e5)](#安装)
 [![Focus](https://img.shields.io/badge/focus-claim--first_research_workflow-purple)](#为什么是-compassbear)
@@ -25,6 +25,19 @@ CompassBear 会把零散的数据、机制、图和应用边界整理成**更可
 > **读者必须相信什么？什么证据让这个相信变得不可避免？**
 
 ---
+
+## 30 秒 demo
+
+输入：
+
+> Our material proves a universal mechanism from three samples and steady-state spectra.
+
+CompassBear 应该返回：
+
+- **Verdict:** overclaimed.
+- **Safer claim:** supports a trend in the tested family.
+- **Reviewer risk:** mechanism not isolated; alternatives not excluded.
+- **Next evidence:** discriminating control or orthogonal mechanism test.
 
 ## 为什么是 CompassBear
 
@@ -102,10 +115,10 @@ CompassBear 是 field-agnostic 的，但它的参考场景、figure 词汇和默
 克隆仓库：
 
 ```bash
-git clone https://github.com/433liu/compassbear.git
+git clone https://github.com/433liu/compassbear.git compass-bear
 ```
 
-把文件夹安装为本地 skill，名称设为 `compass-bear`，重启 agent 后调用：
+把克隆下来的 `compass-bear` 文件夹安装为本地 skill，重启 agent 后调用：
 
 ```text
 $compass-bear
@@ -150,6 +163,7 @@ compass-bear/
 ├── commands/
 ├── agents/
 ├── skills/
+├── scripts/
 ├── examples/
 ├── references/
 └── evals/
@@ -173,6 +187,7 @@ CompassBear 比快速润色 prompt 更重，并且高风险 claim 需要你提�
 
 - [INSTALL.md](INSTALL.md)：安装说明
 - [SKILL.md](SKILL.md)：根 skill 行为
+- [examples/live-smoke-test.md](examples/live-smoke-test.md)：完整公开 smoke-test transcript
 - [examples/benchmark-suite.md](examples/benchmark-suite.md)：公开 benchmark prompts
 - [examples/compassbear-output-gallery.md](examples/compassbear-output-gallery.md)：输出样例
 - [SHOWCASE.md](SHOWCASE.md)：GitHub Topics、Description 和发布文案
