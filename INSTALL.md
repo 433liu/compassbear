@@ -12,10 +12,10 @@ reference-manager databases.
 Clone the repository:
 
 ```bash
-git clone https://github.com/433liu/compassbear.git
+git clone https://github.com/433liu/compassbear.git compass-bear
 ```
 
-Install the cloned folder as a local skill named:
+Install the cloned folder as a local skill:
 
 ```text
 compass-bear
@@ -27,9 +27,6 @@ Typical target layout:
 <agent-config>/skills/compass-bear/
 ```
 
-If your agent expects the folder name to match the skill ID, rename the cloned
-folder from `compassbear` to `compass-bear`.
-
 Then invoke:
 
 ```text
@@ -38,8 +35,8 @@ $compass-bear
 
 ## Option 2: Install From A Release Zip
 
-Download the public release zip, extract it, and install the extracted
-`compass-bear-public` folder as:
+Download the `v0.5.18-public` release zip, extract it, and install the extracted
+`compass-bear` folder as:
 
 ```text
 compass-bear
@@ -75,7 +72,7 @@ according to that agent's command documentation.
 From the installed package root, run:
 
 ```bash
-python -c "import json, pathlib; [json.loads(line) for line in pathlib.Path('evals/cases.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]; print('OK')"
+python scripts/validate_package.py
 ```
 
 Manual smoke prompt:
