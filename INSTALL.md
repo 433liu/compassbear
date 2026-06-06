@@ -1,141 +1,109 @@
-# CompassBear Public Installation Guide
+# Install CompassBear
 
-This package is the sanitized public build of `compass-bear`.
+CompassBear is distributed as a public, source-safe skill folder. The repository
+root is the installable skill package.
 
-It does not include:
+It contains no private mentor lenses, local project data, generated outputs,
+local paths, API keys, unpublished manuscript material, source-note archives, or
+reference-manager databases.
 
-- `.env` or any real API keys;
-- generated outputs;
-- personal project rosters or source notes;
-- personal mentor lens cards and related private routing references.
+## Option 1: Install From GitHub
 
-It does include the reusable skill, sub-skills, references, scripts, public examples, tests and blank templates under `templates/`.
-
-## 1. Install from GitHub clone
-
-This repository now contains the full public skill package. You can install it directly from GitHub.
-
-Codex Desktop on Windows:
-
-```powershell
-git clone https://github.com/433liu/compassbear.git "$env:TEMP\compassbear"
-$destRoot = "$env:USERPROFILE\.codex\skills"
-New-Item -ItemType Directory -Force -Path $destRoot | Out-Null
-Copy-Item -Recurse -Force "$env:TEMP\compassbear" "$destRoot\compass-bear"
-```
-
-Claude Code:
+Clone the repository:
 
 ```bash
-git clone https://github.com/433liu/compassbear.git /tmp/compassbear
-mkdir -p ~/.claude/skills
-cp -R /tmp/compassbear ~/.claude/skills/compass-bear
+git clone https://github.com/433liu/compassbear.git
 ```
 
-Restart the app after copying. Invoke the skill with:
-
-```text
-$compass-bear
-```
-
-## 2. Install from Release zip
-
-Unzip the package and keep the folder name as:
+Install the cloned folder as a local skill named:
 
 ```text
 compass-bear
 ```
 
-If the extracted folder is named `compass-bear-v0.5.14-public`, rename it to `compass-bear` when installing into a skills directory.
+Typical target layout:
 
-## 3. Install release zip for Codex Desktop on Windows
-
-Create the Codex skills folder if it does not exist, then copy the extracted folder into it:
-
-```powershell
-$destRoot = "$env:USERPROFILE\.codex\skills"
-New-Item -ItemType Directory -Force -Path $destRoot | Out-Null
-Copy-Item -Recurse -Force "C:\path\to\compass-bear-v0.5.14-public" "$destRoot\compass-bear"
+```text
+<agent-config>/skills/compass-bear/
 ```
 
-Restart Codex Desktop. Invoke the skill with:
+If your agent expects the folder name to match the skill ID, rename the cloned
+folder from `compassbear` to `compass-bear`.
+
+Then invoke:
 
 ```text
 $compass-bear
 ```
 
-## 4. Install release zip for Claude Code
+## Option 2: Install From A Release Zip
 
-Global install:
+Download the public release zip, extract it, and install the extracted
+`compass-bear-public` folder as:
 
-```bash
-mkdir -p ~/.claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public ~/.claude/skills/compass-bear
+```text
+compass-bear
 ```
 
-Project-level install:
-
-```bash
-mkdir -p .claude/skills
-cp -R /path/to/compass-bear-v0.5.14-public .claude/skills/compass-bear
-```
-
-Restart Claude Code after copying.
-
-## 5. Optional environment file
-
-Most chat-first use does not require API keys.
-
-Only create `.env` if you want the heavy script workflows such as batch literature retrieval or Zotero handoff:
-
-```bash
-cp .env.example .env
-```
-
-Then fill only the keys you actually need. Leave unused fields blank. Do not share `.env`.
-
-Useful optional fields:
-
-- `UNPAYWALL_EMAIL`: enables Unpaywall open-access PDF lookup.
-- `SEMANTIC_SCHOLAR_API_KEY`: optional higher Semantic Scholar rate limits.
-- `OPENALEX_API_KEY`: optional higher OpenAlex rate limits.
-- `SERPER_API_KEY`: optional paid Google-style fallback search.
-- `ZOTERO_API_KEY` and `ZOTERO_USER_ID`: optional Zotero push/pull handoff.
-
-## 6. Verify installation
-
-From the installed folder:
-
-```bash
-python scripts/cb.py doctor
-python scripts/cb.py checks
-```
-
-Then test in Codex or Claude Code:
+Then restart your agent and invoke:
 
 ```text
 $compass-bear
-Help me audit this abstract for claim discipline, evidence hierarchy and AI rhythm.
 ```
 
-The answer should focus on defensible claims, evidence boundaries, figure logic and reviewer risk rather than only sentence polishing.
+## Optional Command Wrappers
 
-## 7. Using local templates
+The `commands/` folder contains lightweight routes:
 
-The public build has no personal mentor cards. To create your own local source-backed lens or source pack, start from:
+| Command file | Route |
+|---|---|
+| `cb.md` | root router |
+| `cb-writing.md` | manuscript writing |
+| `cb-figure.md` | figure strategy |
+| `cb-audit.md` | consistency audit |
+| `cb-council.md` | research-direction debate |
+| `cb-cover.md` | cover letter |
+| `cb-rebuttal.md` | reviewer response |
+| `cb-methods.md` | Methods / SI |
+| `cb-patent.md` | patent-style boundary |
 
-- `templates/expert-lens-template.md`
-- `templates/source-note-template.md`
-- `templates/project-roster-template.md`
-- `templates/user-preference-template.md`
+If your agent supports slash-command installation, register these files
+according to that agent's command documentation.
 
-Keep personal or unpublished material out of any package you plan to share.
+## Verify The Package
 
-## 8. Common issues
+From the installed package root, run:
 
-If the skill does not trigger, confirm the installed directory is named exactly `compass-bear` and restart the app.
+```bash
+python -c "import json, pathlib; [json.loads(line) for line in pathlib.Path('evals/cases.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]; print('OK')"
+```
 
-If script checks fail because Python is missing, install Python 3.10+ and rerun the commands.
+Manual smoke prompt:
 
-If RAG or Zotero scripts fail due missing keys, either fill `.env` for those optional workflows or use the default chat-native workflow instead.
+```text
+$compass-bear
+Audit this claim for overreach: "This small synthetic dataset proves a universal
+mechanism across the whole material family."
+```
 
+Expected behavior:
+
+- mark the universal mechanism claim as unsupported;
+- explain what evidence would be required;
+- offer safer wording;
+- identify reviewer risk.
+
+## What Is Not Included
+
+This public package does not include:
+
+- private expert-lens cards;
+- personal project rosters;
+- source notes from papers;
+- generated literature matrices;
+- local reference-manager databases or PDFs;
+- local scripts, API keys, caches or logs;
+- unpublished manuscript-specific examples.
+
+Users can create private local materials for their own research workflow, but
+those files should not be committed to this public repository.
