@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">CompassBear before and after example</title>
+  <desc id="desc">A visual comparison showing a vague overclaimed abstract before CompassBear and a claim-first, evidence-calibrated version after CompassBear.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="url(#bg)"/>
+  <text x="60" y="66" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="800" fill="#111827">CompassBear turns polish requests into reviewer-proof decisions</text>
+  <text x="60" y="104" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563">Before: impressive but fragile. After: claim-first, evidence-calibrated, easier to defend.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="145" width="510" height="330" rx="18" fill="#ffffff"/>
+    <rect x="60" y="145" width="510" height="64" rx="18" fill="#fee2e2"/>
+    <text x="92" y="185" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#991b1b">Before: prose polish mode</text>
+    <text x="92" y="248" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">&quot;Our material shows excellent</text>
+    <text x="92" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">performance and proves a universal</text>
+    <text x="92" y="316" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">mechanism for the whole family.&quot;</text>
+    <line x1="92" y1="350" x2="520" y2="350" stroke="#fecaca" stroke-width="2"/>
+    <text x="92" y="389" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#7f1d1d">Reviewer risk:</text>
+    <text x="212" y="389" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#111827">overclaim, mechanism gap, weak scope</text>
+    <text x="92" y="424" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#7f1d1d">Output:</text>
+    <text x="154" y="424" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#111827">better-sounding sentence, same risk</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="630" y="145" width="510" height="330" rx="18" fill="#ffffff"/>
+    <rect x="630" y="145" width="510" height="64" rx="18" fill="#dcfce7"/>
+    <text x="662" y="185" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" fill="#166534">After: claim-first mode</text>
+    <text x="662" y="248" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">&quot;The current dataset supports a</text>
+    <text x="662" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">material-level performance trend;</text>
+    <text x="662" y="316" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#111827">the mechanism remains testable.&quot;</text>
+    <line x1="662" y1="350" x2="1090" y2="350" stroke="#bbf7d0" stroke-width="2"/>
+    <text x="662" y="389" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#166534">Decision:</text>
+    <text x="744" y="389" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#111827">demote mechanism, keep performance trend</text>
+    <text x="662" y="424" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#166534">Output:</text>
+    <text x="724" y="424" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" fill="#111827">safer wording + evidence action</text>
+  </g>
+
+  <g>
+    <rect x="165" y="520" width="180" height="46" rx="23" fill="#111827"/>
+    <text x="205" y="549" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Claim</text>
+    <rect x="370" y="520" width="180" height="46" rx="23" fill="#1d4ed8"/>
+    <text x="420" y="549" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Evidence</text>
+    <rect x="575" y="520" width="180" height="46" rx="23" fill="#7c3aed"/>
+    <text x="615" y="549" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Risk</text>
+    <rect x="780" y="520" width="255" height="46" rx="23" fill="#047857"/>
+    <text x="827" y="549" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">Safer wording</text>
+  </g>
+</svg>

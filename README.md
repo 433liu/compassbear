@@ -4,6 +4,11 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Focus](https://img.shields.io/badge/focus-claim--first%20research%20workflow-purple)
 
+> **For researchers using Claude Code or Codex** - audit overclaims, defend
+> figures, plan rebuttals, and position manuscripts before polishing prose.
+
+![CompassBear before and after demo](examples/compassbear-before-after.svg)
+
 **CompassBear is a claim-first research skill for making scientific stories harder to attack.**
 
 Most academic AI tools start with the visible layer: polish the prose, summarize
@@ -12,8 +17,26 @@ layer earlier:
 
 > What must the reader believe, and what evidence makes that belief unavoidable?
 
-Use it when the bottleneck is not "make this sound better", but "make this
-manuscript, figure, rebuttal, cover letter, or project direction defensible."
+Use it when the bottleneck is not "make this sound better", but:
+
+- "is this claim defensible?";
+- "does this figure prove what the caption says?";
+- "will reviewers attack this mechanism?";
+- "which journal framing is honest?";
+- "should we read more papers or stop this direction now?"
+
+## Quick Start
+
+```bash
+git clone https://github.com/433liu/compassbear.git
+```
+
+Install the folder as a local skill named `compass-bear`, then ask:
+
+```text
+$compass-bear
+Audit this abstract for overclaiming and reviewer risk.
+```
 
 ## Why It Is Different
 
