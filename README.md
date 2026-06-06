@@ -5,7 +5,7 @@
 **The claim-first research-writing skill for Claude Code & Codex.**  
 *Make your scientific story harder to attack, not just nicer to read.*
 
-[![Release](https://img.shields.io/badge/release-v0.5.18--public-2ea043)](../../releases)
+[![Release](https://img.shields.io/badge/release-v0.5.18--public-2ea043)](https://github.com/433liu/compassbear/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Agents](https://img.shields.io/badge/agents-Claude_Code_%7C_Codex-8957e5)](#install)
 [![Focus](https://img.shields.io/badge/focus-claim--first_research_workflow-purple)](#why-compassbear)
@@ -25,6 +25,19 @@ CompassBear turns scattered data, mechanisms, figures and applications into **de
 > **What must the reader believe, and what evidence makes that belief unavoidable?**
 
 ---
+
+## 30-second demo
+
+Input:
+
+> Our material proves a universal mechanism from three samples and steady-state spectra.
+
+CompassBear should return:
+
+- **Verdict:** overclaimed.
+- **Safer claim:** supports a trend in the tested family.
+- **Reviewer risk:** mechanism not isolated; alternatives not excluded.
+- **Next evidence:** discriminating control or orthogonal mechanism test.
 
 ## Why CompassBear
 
@@ -102,10 +115,10 @@ No heavy framework is required to start. The public package is a clean, installa
 Clone the repository:
 
 ```bash
-git clone https://github.com/433liu/compassbear.git
+git clone https://github.com/433liu/compassbear.git compass-bear
 ```
 
-Install the folder as a local skill named `compass-bear`, then restart your agent and invoke:
+Install the cloned `compass-bear` folder as a local skill, then restart your agent and invoke:
 
 ```text
 $compass-bear
@@ -150,6 +163,7 @@ compass-bear/
 ├── commands/
 ├── agents/
 ├── skills/
+├── scripts/
 ├── examples/
 ├── references/
 └── evals/
@@ -173,6 +187,7 @@ not merely:
 
 - [INSTALL.md](INSTALL.md): installation
 - [SKILL.md](SKILL.md): root skill behavior
+- [examples/live-smoke-test.md](examples/live-smoke-test.md): complete public smoke-test transcript
 - [examples/benchmark-suite.md](examples/benchmark-suite.md): public benchmark prompts
 - [examples/compassbear-output-gallery.md](examples/compassbear-output-gallery.md): output examples
 - [SHOWCASE.md](SHOWCASE.md): GitHub Topics, Description and launch copy
