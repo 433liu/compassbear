@@ -7,8 +7,9 @@
 
 [![Release](https://img.shields.io/badge/release-v0.5.18--public-2ea043)](../../releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Agents](https://img.shields.io/badge/agents-Claude_Code_%7C_Codex-8957e5)](#安装)
-[![Focus](https://img.shields.io/badge/focus-claim--first_research_workflow-purple)](#为什么是-compassbear)
+[![Focus](https://img.shields.io/badge/focus-claim--first_research_workflow-purple)](#why-compassbear)
+[![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-orange?logo=anthropic&logoColor=white)](https://claude.ai/code)
+[![Built with Codex](https://img.shields.io/badge/built%20with-OpenAI%20Codex-412991?logo=openai&logoColor=white)](https://openai.com/codex)
 
 [English](README.md) | **中文**
 
@@ -178,6 +179,15 @@ CompassBear 比快速润色 prompt 更重，并且高风险 claim 需要你提�
 ## 状态与贡献
 
 CompassBear 正在持续开发。欢迎提 Issue 和 PR。如果它帮你少走一轮痛苦 revision，给一个 star 会让更多研究者看到它。
+
+## Acknowledgements
+
+CompassBear was co-developed with AI coding assistants:
+
+- [Claude Code](https://claude.ai/code) (Anthropic) — workflow logic, skill architecture, claim-discipline protocols, reference documents, and iterative revision
+- [OpenAI Codex](https://openai.com/codex) — structural iteration and package organization
+
+Human scientific judgment, domain expertise, and all manuscript content remain the author's own responsibility.
 
 ## License
 
