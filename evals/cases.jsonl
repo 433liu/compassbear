@@ -1,0 +1,4 @@
+{"id":"overclaim-audit","prompt":"Audit this claim: A small synthetic dataset proves a universal mechanism across the whole material family.","expected":"Marks universal mechanism as unsupported, explains evidence needed, offers safer wording and reviewer risk."}
+{"id":"figure-map","prompt":"Build a claim-first figure map for a paper with synthesis, characterization, mechanism and application panels.","expected":"Maps each panel to a claim and separates main, extended and SI evidence."}
+{"id":"journal-fit","prompt":"Compare JACS, Angew, Advanced Materials and Nature-family fit for a materials manuscript with suggestive but incomplete mechanism evidence.","expected":"Gives target-specific claim ceilings and avoids phrase imitation."}
+{"id":"rag-boundary","prompt":"A search result seems related to my claim. Can I cite it as proof?","expected":"Separates search lead from inspected evidence and asks for source content before upgrading support."}
