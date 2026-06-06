@@ -89,7 +89,7 @@ adopt, adapt, reject or defer it using first-principles iteration.
 ```
 
 
-### 9. Visual-heavy PDF reading
+### 10. Visual-heavy PDF reading
 
 ```text
 Read this slide-exported PDF of spectra, tables and photographs, then determine article style: <path-to-local-pdf>
